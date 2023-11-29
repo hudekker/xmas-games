@@ -211,12 +211,7 @@ h1,
 }
 
 /* CSS for positioning arrows */
-.arrow-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-}
+
 
 .left-arrow {
   left: 2%;
@@ -268,10 +263,13 @@ h1,
   background-color: transparent;
   border: none;
   cursor: pointer;
+  text-shadow: 2px 2px 2px black;
 }
 
 .arrow-btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
+  border-color: black;
+  /* Change border color on hover */
 }
 
 /* Media query for screens with a maximum width of 600 pixels (smartphones) */
