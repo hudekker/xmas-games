@@ -47,3 +47,24 @@ galleryModal.addEventListener('click', function (event) {
     closeGallery()
   }
 });
+
+document.addEventListener('keydown', function (event) {
+  // Check if the modal is open
+  const galleryModal = document.getElementById('galleryModal');
+  if (galleryModal.style.display === 'block') {
+    // Handle arrow key events
+    switch (event.key) {
+      case 'ArrowRight':
+        // Handle right arrow key press
+        nextImage();
+        break;
+      case 'ArrowLeft':
+        // Handle left arrow key press
+        prevImage();
+        break;
+      default:
+        // Ignore other key presses
+        break;
+    }
+  }
+});
