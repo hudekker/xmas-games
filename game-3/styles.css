@@ -124,6 +124,14 @@ h1,
   /* Adjusted to 100% */
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .centered-text {
   display: flex;
   flex-direction: column;
@@ -137,6 +145,11 @@ h1,
   float: right;
   font-size: 28px;
   font-weight: bold;
+
+  /* font-size: 24px;  */
+  cursor: pointer;
+  margin-left: auto;
+  /* This will push the 'X' to the right */
 }
 
 .close:hover,
@@ -239,7 +252,7 @@ h1,
 } */
 
 .gallery-image {
-  max-width: 80vw;
+  max-width: 90vw;
   /* max-height: 150vh; */
   /* display: block; */
   margin: 0 auto;
@@ -266,6 +279,10 @@ h1,
   .memory-game {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
+  }
+
+  .modal {
+    padding: 20px 10px;
   }
 
   h1,
