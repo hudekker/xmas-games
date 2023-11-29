@@ -239,7 +239,7 @@ h1,
 } */
 
 .gallery-image {
-  max-width: 80vw;
+  max-width: 90vw;
   /* max-height: 150vh; */
   /* display: block; */
   margin: 0 auto;
@@ -266,6 +266,10 @@ h1,
   .memory-game {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
+  }
+
+  .modal {
+    padding: 20px 10px;
   }
 
   h1,
