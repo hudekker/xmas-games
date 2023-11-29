@@ -1,3 +1,12 @@
+// Function to shuffle an array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 async function createImagePathArray() {
   try {
     const response = await fetch('assets-user/pictures.json');
@@ -5,8 +14,19 @@ async function createImagePathArray() {
 
     if (files.length > 0) {
       // Create an array of paths using the file names
-      const paths = files.map(file => file.url);
-      return paths;
+      // const paths = files.map(file => file.url);
+      // return paths;
+      debugger;
+      // Shuffle the array of filenames
+      const shuffledFiles = shuffleArray([...files]);
+
+      // Select the first six filenames
+      const selectedFiles = shuffledFiles.slice(0, 6);
+
+      // Create an array of image paths
+      const imagePaths = selectedFiles.map(file => file.url);
+
+      return imagePaths;
     } else {
       console.error('No files found in the "assets-user" folder.');
       return [];
